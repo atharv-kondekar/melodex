@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Admin — SoundShelf</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="app">
+		<aside class="sidebar">
+			<div class="brand">
+				<div class="logo">S</div>
+				<div><strong>SoundShelf</strong><small>Music REST App</small></div>
+			</div>
+			<nav class="nav"><a class="active" href="Admin.html">◆ <span>Admin</span></a><a class=""
+					href="Albums.html">◆ <span>Albums</span></a><a class="" href="Users.html">◆ <span>Users</span></a><a
+					class="" href="UploadAlbum.html">◆ <span>Upload Album</span></a></nav>
+			<div class="backend" id="backendStatus"><span class="dot"></span> Checking backend...</div>
+		</aside>
+		<main class="main">
+			<header class="topbar">
+				<div>
+					<p class="eyebrow">CONTROL CENTER</p>
+					<h1>Admin Dashboard</h1>
+				</div><a class="btn primary" href="UploadAlbum.html">＋ Upload album</a>
+			</header>
+			<section class="hero">
+				<p class="eyebrow">SOUNDSHELF</p>
+				<h2>Manage your media library.</h2>
+				<p class="muted">A clean frontend over your Spring Boot REST API.</p>
+			</section>
+			<section class="stats">
+				<div class="card stat"><strong id="albumCount">—</strong><small>Total albums</small></div>
+				<div class="card stat"><strong id="userCount">—</strong><small>Total users</small></div>
+				<div class="card stat"><strong>8081</strong><small>API port</small></div>
+			</section>
+		</main>
+	</div>
+	<script src="js/api.js"></script>
+	<script src="js/admin.js"></script>
+</body>
+
+</html>

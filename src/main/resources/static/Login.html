@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <title>Login — SoundShelf</title>
+
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="login-page">
+
+        <div class="card login-card">
+
+
+            <!-- BRAND -->
+
+            <div class="brand login-logo">
+
+                <div class="logo">
+                    S
+                </div>
+
+                <div>
+
+                    <strong>
+                        SoundShelf
+                    </strong>
+
+                    <small>
+                        Music REST App
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- HEADING -->
+
+            <p class="eyebrow">
+                WELCOME BACK
+            </p>
+
+            <h1>
+                Sign in
+            </h1>
+
+            <p class="muted">
+                Login to manage your music library.
+            </p>
+
+
+            <!-- LOGIN FORM -->
+
+            <form id="loginForm">
+
+                <label for="email">
+                    Email
+                </label>
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    required
+                >
+
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="••••••••"
+                    required
+                >
+
+
+                <button
+                    class="btn primary"
+                    type="submit"
+                    style="width:100%"
+                >
+
+                    Sign in
+
+                </button>
+
+
+                <div
+                    id="message"
+                    class="message hidden"
+                ></div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMPORTANT: api.js FIRST -->
+
+    <script src="js/api.js"></script>
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

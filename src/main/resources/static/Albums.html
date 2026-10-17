@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>Albums — SoundShelf</title>
+
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- Common CSS -->
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+    <div class="app">
+
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside class="sidebar">
+
+
+            <!-- Logo -->
+
+            <div class="brand">
+
+                <div class="logo">
+                    S
+                </div>
+
+                <div>
+
+                    <strong>
+                        SoundShelf
+                    </strong>
+
+                    <small>
+                        Music REST App
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="nav">
+
+
+                <!-- Everyone can access Albums -->
+
+                <a class="active"
+                   href="Albums.html">
+
+                    ◆
+
+                    <span>
+                        Albums
+                    </span>
+
+                </a>
+
+
+                <!-- ADMIN ONLY -->
+
+                <a id="adminLink"
+                   href="Admin.html">
+
+                    ◆
+
+                    <span>
+                        Admin
+                    </span>
+
+                </a>
+
+
+                <!-- ADMIN ONLY -->
+
+                <a id="usersLink"
+                   href="Users.html">
+
+                    ◆
+
+                    <span>
+                        Users
+                    </span>
+
+                </a>
+
+
+                <!-- ADMIN ONLY -->
+
+                <a id="uploadLink"
+                   href="UploadAlbum.html">
+
+                    ◆
+
+                    <span>
+                        Upload Album
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <!-- =========================
+                 USER SESSION
+            ========================== -->
+
+            <div class="backend"
+                 style="margin-top:auto; margin-bottom:10px;">
+
+                <div>
+
+                    <strong id="userName">
+                        User
+                    </strong>
+
+                </div>
+
+                <small id="userRole">
+                    —
+                </small>
+
+                <br>
+
+                <button class="btn"
+                        onclick="logout()"
+                        style="margin-top:10px; width:100%;">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+
+            <!-- Backend Status -->
+
+            <div class="backend"
+                 id="backendStatus">
+
+                <span class="dot"></span>
+
+                Checking backend...
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =========================
+             MAIN CONTENT
+        ========================== -->
+
+        <main class="main">
+
+
+            <!-- Header -->
+
+            <header class="topbar">
+
+
+                <div>
+
+                    <p class="eyebrow">
+                        COLLECTION
+                    </p>
+
+                    <h1>
+                        Albums
+                    </h1>
+
+                </div>
+
+
+                <!-- ADMIN ONLY -->
+
+                <a id="addAlbumButton"
+                   class="btn primary"
+                   href="UploadAlbum.html">
+
+                    ＋ Add album
+
+                </a>
+
+
+            </header>
+
+
+
+            <!-- =========================
+                 SEARCH
+            ========================== -->
+
+            <div class="toolbar">
+
+                <input
+                    id="search"
+                    class="search"
+                    placeholder="Search by title or filename..."
+                >
+
+
+                <button
+                    id="refresh"
+                    class="btn">
+
+                    ↻ Refresh
+
+                </button>
+
+            </div>
+
+
+
+            <!-- Error / Success message -->
+
+            <div
+                id="message"
+                class="message hidden">
+            </div>
+
+
+
+            <!-- Albums -->
+
+            <section
+                id="albumGrid"
+                class="grid">
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="js/api.js"></script>
+
+    <script src="js/albums.js"></script>
+
+
+    <!-- =========================
+         SESSION INITIALIZATION
+    ========================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                setupNavigation();
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
